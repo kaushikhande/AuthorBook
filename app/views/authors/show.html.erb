@@ -7,4 +7,13 @@
   <p>
     <%= @author.dob %>
   </p>
+  <p> Books Title
+    <ul>
+      <% @author.books.each do |book| %>
+        <li>
+          <%= book.title %>
+        </li>
+      <% end %>
+    </ul>
+  </p>
 </p>
