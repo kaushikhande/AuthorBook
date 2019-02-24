@@ -10,6 +10,10 @@
     <%= f.date_field :dob %> 
   </p>
   <p>
+    <%= f.label :book, "Book" %>
+    <%= select_tag "books", options_from_collection_for_select(@books, "id", "title"), multiple: true, prompt: "" %>
+  </p>
+  <p>
     <%= f.submit "Submit", :disable_with => 'Submiting...' %>
   </p>
   

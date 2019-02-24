@@ -1,10 +1,14 @@
 class AuthorsController < ApplicationController
   def new
     @author = Author.new
+    @books = Book.all
   end
 
   def create
     @author = Author.create(author_params)
+    params[:books].each do |id|
+      @author.books << Book.find(id)
+    end
     if @author.save
       redirect_to @author
     else
@@ -13,6 +17,7 @@ class AuthorsController < ApplicationController
   end
 
   def index
+    @authors = Author.all
   end
 
   def show
