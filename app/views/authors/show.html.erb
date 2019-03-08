@@ -1,19 +1,19 @@
-<h1>Authors#show</h1>
-<p>Find me in app/views/authors/show.html.erb</p>
-<p>
-  <h4>
-   <%= @author.name %> 
-  </h4>
+<div class="container">
   <p>
-    <%= @author.dob %>
-  </p>
-  <p> Books Title
-    <ul>
-      <% @author.books.each do |book| %>
-        <li>
-          <%= book.title %>
-        </li>
-      <% end %>
-    </ul>
-  </p>
-</p>
+    <h4>
+     <%= @author.name %> 
+    </h4>
+    <p>
+      <%= @author.dob %>
+    </p>
+    <p> Books Title
+      <ul>
+        <% @author.books.each do |book| %>
+          <li>
+            <%= book.title %>
+          </li>
+        <% end %>
+      </ul>
+    </p>
+  </p>  
+</div>

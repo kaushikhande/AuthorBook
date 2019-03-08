@@ -6,8 +6,10 @@ class AuthorsController < ApplicationController
 
   def create
     @author = Author.create(author_params)
-    params[:books].each do |id|
-      @author.books << Book.find(id)
+    if params[:books].present?
+      params[:books].each do |id|
+        @author.books << Book.find(id)
+      end
     end
     if @author.save
       redirect_to @author

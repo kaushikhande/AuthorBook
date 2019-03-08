@@ -9,5 +9,7 @@
 - [x] Multi select book option for author
 - [x] Added devise gem and basic functionality
 - [x] Added little css to author.
+- [x] Added bootstrap theme
+- [ ] Bootstrap additional work Form-group etc
 - [ ] Add mailer options
 - [ ] Follow the tutorial [link](https://www.sitepoint.com/devise-authentication-in-depth/)

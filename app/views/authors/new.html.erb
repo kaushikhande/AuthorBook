@@ -1,20 +1,19 @@
-<h1>Authors#new</h1>
-<p>Find me in app/views/authors/new.html.erb</p>
-<%= form_with(model: @author, local: true) do |f| %>
-  <p>
-    <%= f.label :name, "Name" %>
-    <%= f.text_field :name %>  
-  </p>
-  <p>
-    <%= f.label :date, "Date" %>
-    <%= f.date_field :dob %> 
-  </p>
-  <p>
-    <%= f.label :book, "Book" %>
-    <%= select_tag "books", options_from_collection_for_select(@books, "id", "title"), multiple: true, prompt: "" %>
-  </p>
-  <p>
-    <%= f.submit "Submit", :disable_with => 'Submiting...' %>
-  </p>
-  
-<% end %>
+<div class = "container">
+  <%= form_with(model: @author, local: true) do |f| %>
+    <p>
+      <%= f.label :name, "Name" %>
+      <%= f.text_field :name %>  
+    </p>
+    <p>
+      <%= f.label :date, "Date" %>
+      <%= f.date_field :dob %> 
+    </p>
+    <p>
+      <%= f.label :book, "Book" %>
+      <%= select_tag "books", options_from_collection_for_select(@books, "id", "title"), multiple: true, prompt: "" %>
+    </p>
+    <p>
+      <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+    </p>
+  <% end %>  
+</div>
