@@ -1,21 +1,19 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
-<%= form_with(model: @book, local: true) do |f| %>
-  <p>
-    <%= f.label :title, "Title" %>
-    <%= f.text_field :title %>  
-  </p>
-  <p>
-    <%= f.label :isbn, "Isbn" %>
-    <%= f.text_field :isbn %> 
-  </p>
-  <p>
-    <%= f.label :author, "Author" %>
-    <%= select("book", "author_id", Author.all.collect {|a| [ a.name, a.id ] }, { include_blank: true }) %>
-
-  </p>
-  <p>
-    <%= f.submit "Submit", :disable_with => 'Submiting...' %>
-  </p>
-  
-<% end %>
+<div class="container">
+  <%= form_with(model: @book, local: true) do |f| %>
+    <p>
+      <%= f.label :title, "Title" %>
+      <%= f.text_field :title %>  
+    </p>
+    <p>
+      <%= f.label :isbn, "Isbn" %>
+      <%= f.text_field :isbn %> 
+    </p>
+    <p>
+      <%= f.label :author, "Author" %>
+      <%= select("book", "author_id", Author.all.collect {|a| [ a.name, a.id ] }, { include_blank: true }) %>
+    </p>
+    <p>
+      <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+    </p>
+  <% end %>  
+</div>

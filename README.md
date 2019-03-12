@@ -10,6 +10,8 @@
 - [x] Added devise gem and basic functionality
 - [x] Added little css to author.
 - [x] Added bootstrap theme
+- [x] Books view according to bootstrap.
+- [ ] Add haml gem.
 - [ ] Bootstrap additional work Form-group etc
 - [ ] Add mailer options
 - [ ] Follow the tutorial [link](https://www.sitepoint.com/devise-authentication-in-depth/)
