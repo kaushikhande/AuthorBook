@@ -13,7 +13,9 @@
 - [x] Books view according to bootstrap.
 - [x] Add lockable, confirmable and recoverable to user
 - [x] Follow the tutorial [link](https://www.sitepoint.com/devise-authentication-in-depth/)
-- [ ] Open letter gem to preview mail.
+- [x] Open letter gem to preview mail.
+- [ ] Sign-in and Sign Up modals.
+- [ ] Heroku deploy
 - [ ] Add haml gem.
 - [ ] Bootstrap additional work Form-group etc
 

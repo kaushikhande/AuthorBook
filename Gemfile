@@ -68,3 +68,5 @@ gem 'devise'
 gem 'bootstrap'
 
 gem 'jquery-rails'
+
+gem "letter_opener", :group => :development
