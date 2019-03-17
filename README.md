@@ -11,7 +11,9 @@
 - [x] Added little css to author.
 - [x] Added bootstrap theme
 - [x] Books view according to bootstrap.
+- [x] Add lockable, confirmable and recoverable to user
+- [x] Follow the tutorial [link](https://www.sitepoint.com/devise-authentication-in-depth/)
+- [ ] Open letter gem to preview mail.
 - [ ] Add haml gem.
 - [ ] Bootstrap additional work Form-group etc
-- [ ] Add mailer options
-- [ ] Follow the tutorial [link](https://www.sitepoint.com/devise-authentication-in-depth/)
+
