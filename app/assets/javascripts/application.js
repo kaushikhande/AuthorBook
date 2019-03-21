@@ -17,3 +17,74 @@
 //= require popper
 //= require bootstrap
 //= require_tree .
+$(document).ready(function(){
+  $.fn.serializeObject = function() {
+    var values = {}
+    $("form input, form select, form textarea").each( function(){
+      values[this.name] = $(this).val();
+    });
+    return values;
+  }
+      
+  function clear_errors() {
+    $('#js-error-block ul').html('');
+    $('.form-control').attr('style','1px solid #ccc;');
+  }
+  
+  String.prototype.titleize = function() {
+    return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+  };
+
+  $("form#ajax_signin").submit(function(e){
+    e.preventDefault(); 
+    var user_info = $(this).serializeObject();
+    $.ajax({
+      type: "POST",
+      url: "http://localhost:3000/users/sign_in",
+      data: user_info,
+      success: function(json){
+        console.log("success");
+        location.href = "/";;
+      },
+      error: function(xhr) { 
+        /** ACTIVATE THIS IF YOU GOT MORE THAN EMAIL OR PASSWORD FIELDS
+        var errors = jQuery.parseJSON(xhr.responseText).errors; 
+        for (messages in errors) { 
+          error_messages =  messages + ' ' + errors[messages];
+        } 
+        */
+        console.log("error");
+        $('#js-error-block-login').show();
+      }, 
+      dataType: "json"
+    });
+  });
+      
+  $("form#ajax_signup").submit(function(e){
+    e.preventDefault(); 
+    var user_info = $(this).serializeObject();
+    $.ajax({
+      type: "POST",
+      url: "http://localhost:3000/users",
+      data: user_info,
+      success: function(json){
+        location.href = "/";;
+      },
+      error: function(xhr) {
+        var errors = jQuery.parseJSON(xhr.responseText).errors; 
+        for (messages in errors) { 
+          error_messages =  messages.titleize() + ' ' + errors[messages];
+          var field = "form#ajax_signup " + "#user_" + messages;
+          var error_message = error_messages;
+          console.log(error_messages);
+          //alert(error_messages);
+          $('#js-error-block-signup ul').append("<li>"+error_messages+"</li>");
+          $(field).css('border', '1px solid #D9534F');          
+        } 
+        $('#js-error-block-signup').show();
+       }, 
+       dataType: "json"
+     });
+     clear_errors();
+  });
+});
