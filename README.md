@@ -1,6 +1,6 @@
 # README
 
-**AuthorBooks Sample APP**
+**AuthorBooks Sample APP**[![CircleCI](https://circleci.com/gh/kaushikhande/AuthorBook.svg?style=svg)](https://circleci.com/gh/kaushikhande/AuthorBook)
 
 **Task List**
 - [x] Added author model
