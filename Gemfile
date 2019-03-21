@@ -76,3 +76,5 @@ gem 'bootstrap'
 gem 'jquery-rails'
 
 gem "letter_opener", :group => :development
+
+gem 'therubyracer', platforms: :ruby
