@@ -78,3 +78,11 @@ gem 'jquery-rails'
 gem "letter_opener", :group => :development
 
 gem 'therubyracer', platforms: :ruby
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.6'
+end
+
+group :development, :test do
+  gem 'factory_bot_rails'
+end
