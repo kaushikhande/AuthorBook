@@ -16,7 +16,8 @@
 - [x] Open letter gem to preview mail.
 - [x] Sign-in and Sign Up modals.[link1](https://strandcode.com/2013/08/23/embedding-devise-forms-in-twitter-bootstrap-modals/) [link2](https://medium.com/@twitting4fun/rails-4-ajax-login-using-devise-b279d90934af) [link3](https://blog.andrewray.me/how-to-set-up-devise-ajax-authentication-with-rails-4-0/)
 - [ ] Add error messages in modals.
-- [ ] Heroku deploy
+- [x] Heroku deploy
+- [ ] Remove errors
 - [ ] Add haml gem.
 - [ ] Bootstrap additional work Form-group etc
 
