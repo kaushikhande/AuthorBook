@@ -18,7 +18,7 @@
 - [ ] Add error messages in modals.
 - [x] Heroku deploy
 - [ ] CircleCi integration
-- [ ] Rspec
+- [ ] Rspec and Factory_Bot gems
 - [ ] Remove errors
 - [ ] Add haml gem.
 - [ ] Bootstrap additional work Form-group etc

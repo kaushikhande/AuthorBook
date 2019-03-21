@@ -86,3 +86,5 @@ end
 group :development, :test do
   gem 'factory_bot_rails'
 end
+
+gem 'rspec_junit_formatter'
