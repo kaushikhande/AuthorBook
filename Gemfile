@@ -88,3 +88,5 @@ group :development, :test do
 end
 
 gem 'rspec_junit_formatter'
+
+gem 'rails-controller-testing'

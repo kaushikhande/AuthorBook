@@ -19,7 +19,7 @@
 - [x] Heroku deploy
 - [x] CircleCi integration
 - [x] Rspec and Factory_Bot gems
-- [ ] Add specs
+- [x] Add sample specs
 - [ ] Remove errors
 - [ ] Add haml gem.
 - [ ] Bootstrap additional work Form-group etc
