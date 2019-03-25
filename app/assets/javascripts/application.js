@@ -55,6 +55,7 @@ $(document).ready(function(){
         location.href = "/";;
       },
       error: function(xhr) { 
+        error_messages = errors[messages]
         // error_messages =  messages.titleize() + ' ' + errors[messages];
         // var field = "form#ajax_signup " + "#user_" + messages;
         // var error_message = error_messages;

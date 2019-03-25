@@ -19,12 +19,12 @@ class Users::SessionsController < Devise::SessionsController
     if resource.valid_password?(params[:user][:password])
       puts "in jhhhhhhhhhhere"
       sign_in :user, resource
-      respond_to do |format|
-        puts format
-        format.html { return redirect_to root_url }
-        format.json { render json: true, status: 201 }
-      end
-      # return render json: true, status: 201
+      # respond_to do |format|
+      #   puts format
+      #   format.html { return redirect_to root_url }
+      #   format.json { render json: true, status: 201 }
+      # end
+      return render json: true, status: 201
     end
 
     invalid_login_attempt
