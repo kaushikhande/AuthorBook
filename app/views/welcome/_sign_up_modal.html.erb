@@ -8,7 +8,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), id: "ajax_signup") do |f| %>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => { :id => "ajax_signin"}) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
 
           <div class="field">

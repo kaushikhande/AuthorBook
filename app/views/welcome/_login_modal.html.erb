@@ -7,8 +7,11 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <div id="js-error-block-login" class="alert alert-danger" style="display:none;">
+        <ul></ul>
+      </div>
       <div class="modal-body">
-        <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), remote: true, id: "ajax_signin") do |f| %>
+        <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), remote: true, :html => { :id => "ajax_signin"}) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
 
           <div><%= f.label :email %><br />

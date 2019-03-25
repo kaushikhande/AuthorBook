@@ -36,25 +36,32 @@ $(document).ready(function(){
   };
 
   $("form#ajax_signin").submit(function(e){
-    e.preventDefault(); 
-    var user_info = $(this).serializeObject();
+    e.preventDefault();
+    var email = $('#user_email').val();
+    var password = $('#user_password').val();
+    var remember_me = ($('#user_remember_me:checked').length != 0) ? 1 : 0;
+    var token = document.querySelector('meta[name="csrf-token"]').content
     $.ajax({
       type: "POST",
-      url: "http://localhost:3000/users/sign_in",
-      data: user_info,
+      url: "http://localhost:3000/users/sign_in.json",
+      contentType: "application/json",
+      dataType: 'json',
+      headers: {
+        'X-CSRF-Token': token
+      },
+      data: JSON.stringify({"user":{"email": email, "password": password, "remember_me": remember_me}}),
       success: function(json){
         console.log("success");
         location.href = "/";;
       },
       error: function(xhr) { 
-        /** ACTIVATE THIS IF YOU GOT MORE THAN EMAIL OR PASSWORD FIELDS
-        var errors = jQuery.parseJSON(xhr.responseText).errors; 
-        for (messages in errors) { 
-          error_messages =  messages + ' ' + errors[messages];
-        } 
-        */
-        console.log("error");
-        $('#js-error-block-login').show();
+        // error_messages =  messages.titleize() + ' ' + errors[messages];
+        // var field = "form#ajax_signup " + "#user_" + messages;
+        // var error_message = error_messages;
+        console.log("error_messages");
+        // //alert(error_messages);
+        // $('#js-error-block-login ul').append("<li>"+error_messages+"</li>");
+        // $(field).css('border', '1px solid #D9534F'); 
       }, 
       dataType: "json"
     });
